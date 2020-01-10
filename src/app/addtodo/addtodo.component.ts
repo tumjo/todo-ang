@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addtodo.component.css']
 })
 export class AddtodoComponent implements OnInit {
+  tekst: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.tekst = 'Add todo';
   }
 
 }
