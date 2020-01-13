@@ -13,5 +13,8 @@ export class AddtodoComponent implements OnInit {
   ngOnInit() {
     this.tekst = 'Add todo';
   }
+  newtodo(uusi: string) {
+    this.tekst = uusi;
+  }
 
 }
