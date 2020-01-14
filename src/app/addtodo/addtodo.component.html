@@ -3,3 +3,8 @@
 <h2>{{tekst}}</h2>
 <input #inputnewtodo [value] ="tekst" (keyup.enter)="newtodo($event.target.value)"> <!--or newtodo(inputnewtodo.value)-->
 <button type="button" class="btn btn-outline-success" (click)="newtodo(inputnewtodo.value)">Add</button>
+<div class="list-group">
+  <ng-container *ngFor="let todoi of todolist">
+    <app-todos [item]="todoi"></app-todos>
+  </ng-container>
+</div>
