@@ -3,11 +3,11 @@
 <button type="button" class="btn btn-outline-success">Success</button>
 <br />
 
-<app-addtodo (submitTodo)="addItem($event)" (removeTodo)="removeItem($event)"></app-addtodo>
+<app-addtodo (submitTodo)="addItem($event)"></app-addtodo>
 
 <table class="table table-hover">
   <tbody *ngFor="let todoPart of todoList">
-    <app-todos [item]="todoPart"></app-todos>
+    <app-todos [item]="todoPart" (removeTodo)="removeItem($event)"></app-todos>
 </tbody>
 </table>
 </div>
