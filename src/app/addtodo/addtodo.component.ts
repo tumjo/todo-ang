@@ -7,12 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class AddtodoComponent implements OnInit {
   tekst: string;
-  todolist = [   // hardcoded list - temp use
-    {todoitem: 'example1'},
-    {todoitem: 'example2'},
-    {todoitem: 'example3'},
-  ];
-  @Output() submittodo: EventEmitter<string> = new EventEmitter();
+  @Output() submitTodo: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
@@ -20,7 +15,7 @@ export class AddtodoComponent implements OnInit {
     this.tekst = 'Add todo';
   }
   newtodo(uusi: string) {
-    this.submittodo.emit(uusi);
+    this.submitTodo.emit(uusi);
   }
   /*
   newtodo(uusi: string) {

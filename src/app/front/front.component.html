@@ -1,0 +1,9 @@
+<div class="container">
+<h1>{{title | titlecase}}</h1>
+<button type="button" class="btn btn-outline-success">Success</button>
+<br />
+<app-addtodo (submitTodo)="addItem($event)" ></app-addtodo>
+<ng-container *ngFor="let todoPart of todoList">
+    <app-todos [item]="todoPart"></app-todos>
+</ng-container>
+</div>
