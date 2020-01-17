@@ -20,4 +20,8 @@ export class FrontComponent implements OnInit {
   addItem(todoitem: string) {
     this.todoList.push({ todoitem });
   }
+  removeItem(todoitem: string) {
+    const temp = this.todoList.indexOf(todoitem);
+    this.todoList.splice(temp, 1);
+  }
 }
