@@ -16,9 +16,13 @@ export class ListService {
     return this.todoList;
   }
 
-  addItem(item) {
-    this.todoList.push( item );
-    console.log(item);
+  addItem(todo) {
+    this.todoList.push(todo);
   }
-
+  removeItem(todo) {
+    console.log(todo);
+    const temp = this.todoList.indexOf(todo);
+    console.log(todo);
+    this.todoList.splice(temp, 1);
+  }
 }

@@ -21,7 +21,6 @@ export class FrontComponent implements OnInit {
 
   }
   removeItem(todoitem: string) {
-    const temp = this.todoList.indexOf(todoitem);
-    this.todoList.splice(temp, 1);
+    this.listService.removeItem({ todoitem });
   }
 }
