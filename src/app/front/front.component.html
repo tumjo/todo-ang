@@ -1,11 +1,9 @@
 <div class="container">
-<h1>{{title | titlecase}}</h1>
-
-<app-addtodo (submitTodo)="addItem($event)"></app-addtodo>
-
-<table class="table table-hover">
-  <tbody *ngFor="let todoPart of todoList">
-    <app-todos [item]="todoPart" (removeTodo)="removeItem($event)"></app-todos>
-</tbody>
-</table>
+  <h1>{{title | titlecase}}</h1>
+  <app-addtodo (submitTodo)="addItem($event)"></app-addtodo>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action" *ngFor="let todoPart of todoList">
+      <app-todos [item]="todoPart" (removeTodo)="removeItem($event)"></app-todos>
+    </li>
+  </ul>
 </div>
