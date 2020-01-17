@@ -20,9 +20,7 @@ export class ListService {
     this.todoList.push(todo);
   }
   removeItem(todo) {
-    console.log(todo);
     const temp = this.todoList.indexOf(todo);
-    console.log(todo);
     this.todoList.splice(temp, 1);
   }
 }

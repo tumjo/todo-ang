@@ -17,9 +17,4 @@ export class AddtodoComponent implements OnInit {
   newtodo(uusi: string) {
     this.submitTodo.emit(uusi);
   }
-  /*
-  newtodo(uusi: string) {
-    this.tekst = uusi;
-  }
-*/
 }
