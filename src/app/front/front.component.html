@@ -1,5 +1,6 @@
 <div class="container">
   <h1>{{title | titlecase}}</h1>
+  <hr class="style14">
   <app-addtodo (submitTodo)="addItem($event)"></app-addtodo>
   <ul class="list-group">
     <li class="list-group-item list-group-item-action" *ngFor="let todoPart of todoList">
