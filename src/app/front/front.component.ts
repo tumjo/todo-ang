@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListService } from '../services/list.service';
 
 @Component({
   selector: 'app-front',
@@ -6,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./front.component.css']
 })
 export class FrontComponent implements OnInit {
+  todoList: any[];
   title = 'todo app';
-  todoList: any[] = [   // hardcoded list - temp use
-    {todoitem: 'example1'},
-    {todoitem: 'example2'},
-    {todoitem: 'example3'},
-    {todoitem: 'example4'},
-  ];
-  constructor() { }
 
-  ngOnInit() { }
+  constructor(private listService: ListService) { }
+
+  ngOnInit() {
+    this.todoList = this.listService.getTodoList();
+  }
 
   addItem(todoitem: string) {
-    this.todoList.push({ todoitem });
+    this.listService.addItem({ todoitem });
+
   }
+
   removeItem(todoitem: string) {
     const temp = this.todoList.indexOf(todoitem);
     this.todoList.splice(temp, 1);

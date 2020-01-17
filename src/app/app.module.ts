@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddtodoComponent } from './addtodo/addtodo.component';
 import { TodosComponent } from './todos/todos.component';
 import { FrontComponent } from './front/front.component';
+import { ListService } from './services/list.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FrontComponent } from './front/front.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
