@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  - Sharing data between Angular components
  - Add todo 
  - Remove todo
+ - *Edit todo (in progress)*
+ - *The app uses a database or local staorage (in progress)*
  
 ## Setup
 
